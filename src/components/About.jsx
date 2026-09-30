@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { manifesto, facts } from "../data.js";
+import { manifesto, facts, stats, profile } from "../data.js";
 import { reveal } from "../lib.js";
 
 // "*palabra*" => énfasis en serif itálica
@@ -28,6 +28,26 @@ export default function About() {
     <section className="about" data-section id="s1" ref={root}>
       <div className="about__inner">
         <span className="label mono">(01) Sobre mí</span>
+        <div className="about__top">
+          <figure className="portrait" data-cursor="Hola">
+            <img src={profile.photo} alt={`Retrato de ${profile.name}`} loading="lazy" />
+            <figcaption className="mono">
+              <span>{profile.name}</span>
+              <span>{profile.city}</span>
+            </figcaption>
+          </figure>
+          <ul className="stats">
+            {stats.map((s) => (
+              <li className="stat" key={s.n}>
+                <b>{s.n}</b>
+                <div>
+                  <span className="stat__t">{s.title}</span>
+                  <span className="stat__s mono">{s.sub}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
         <p className="manifesto">
           {words.map((w, i) => (
             <span key={i} className={`word ${w.em ? "em" : ""}`}>{w.text} </span>
