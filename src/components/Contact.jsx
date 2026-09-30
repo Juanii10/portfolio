@@ -52,6 +52,10 @@ export default function Contact() {
           <span>{profile.email}</span>
           <i aria-hidden="true">↗</i>
         </a>
+        <a className="wa" href={profile.whatsapp} target="_blank" rel="noreferrer" data-cursor="Chatear">
+          <span>WhatsApp</span>
+          <small className="mono">{profile.phone}</small>
+        </a>
         <button className="copy mono" onClick={copy} data-cursor="Copiar">
           {copied ? "Copiado ✓" : "Copiar mail"}
         </button>

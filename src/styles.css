@@ -126,7 +126,7 @@ section { position: relative; padding: 0 var(--g); }
 .about__inner { margin-left: auto; width: min(100%, 52rem); }
 .manifesto { font-size: clamp(1.7rem, 3.3vw, 3.4rem); line-height: 1.12; letter-spacing: -0.03em; font-weight: 400; }
 .word.em { font-family: var(--serif); font-style: italic; color: var(--acid); font-size: 1.12em; letter-spacing: -0.01em; }
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4.5rem; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 1.5rem; margin-top: 4.5rem; }
 .fact { padding-top: 1rem; border-top: 1px solid var(--line); }
 .fact dt { color: var(--dim); margin-bottom: 0.7rem; }
 .fact dd { font-size: 1.02rem; line-height: 1.35; }
@@ -179,6 +179,9 @@ section { position: relative; padding: 0 var(--g); }
 .mail:hover { background: var(--acid); color: #000; border-color: var(--acid); }
 .mail i { font-style: normal; transition: transform 0.4s; }
 .mail:hover i { transform: rotate(45deg); }
+.wa { display: inline-flex; flex-direction: column; gap: 0.25rem; padding: 0.4rem 0 0.4rem 1.6rem; border-left: 1px solid var(--line); font-size: clamp(1.1rem, 2vw, 1.6rem); letter-spacing: -0.03em; transition: color 0.3s; }
+.wa small { color: var(--dim); }
+.wa:hover { color: var(--acid); }
 .copy { color: var(--dim); padding: 0.6rem 0; border-bottom: 1px solid var(--line); transition: color 0.3s, border-color 0.3s; }
 .copy:hover { color: var(--acid); border-color: var(--acid); }
 .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--dim); }
@@ -201,6 +204,7 @@ section { position: relative; padding: 0 var(--g); }
   .row__arrow { grid-column: 3; grid-row: 1; }
   .preview { display: none; }
   .mail { padding: 1rem 1.4rem; }
+  .wa { padding-left: 0; border-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

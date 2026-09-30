@@ -56,7 +56,7 @@ export default function Hero({ ready }) {
       <div className="hero__foot mono fade">
         <span>{profile.city}</span>
         <span className="scroll"><i /> Scroll</span>
-        <span>React · Three.js · Node</span>
+        <span>React · Three.js · SAP Fiori</span>
       </div>
     </section>
   );

@@ -73,6 +73,7 @@ function galaxy(n) {
 const vert = /* glsl */ `
   uniform float uTime, uProgress, uSize, uPixel;
   uniform vec2 uMouse;
+  uniform float uAspect;
   attribute vec3 aP1, aP2, aP3;
   attribute float aRand;
   varying float vMix;
@@ -93,14 +94,16 @@ const vert = /* glsl */ `
     pos += vec3(sin(aRand * 40.0 + uTime), cos(aRand * 23.0 + uTime * 1.1), sin(aRand * 31.0 - uTime)) * turb * 0.9;
     pos += normalize(pos + 0.001) * sin(uTime * 0.7 + aRand * 6.2831) * 0.035;
 
-    vec4 wp = modelMatrix * vec4(pos, 1.0);
-    vec2 d = wp.xy - uMouse;
-    float dist = length(d);
-    wp.xy += normalize(d + 0.0001) * smoothstep(1.3, 0.0, dist) * 0.55;
-    wp.z += smoothstep(1.3, 0.0, dist) * 0.6;
-
-    vec4 mv = viewMatrix * wp;
+    vec4 mv = viewMatrix * modelMatrix * vec4(pos, 1.0);
     gl_Position = projectionMatrix * mv;
+
+    // La repulsión se calcula en espacio de pantalla: el hueco queda
+    // exactamente bajo el puntero sin importar la profundidad de la partícula.
+    vec2 ndc = gl_Position.xy / gl_Position.w;
+    vec2 d = (ndc - uMouse) * vec2(uAspect, 1.0);
+    float k = smoothstep(0.42, 0.0, length(d));
+    ndc += normalize(d + 0.0001) * k * 0.2 / vec2(uAspect, 1.0);
+    gl_Position.xy = ndc * gl_Position.w;
     gl_PointSize = uSize * uPixel * (0.55 + aRand * 0.9) / -mv.z;
     vMix = p / 3.0 + aRand * 0.35;
     vTone = aRand;
@@ -153,6 +156,7 @@ function Cloud() {
       uSize: { value: isMobile ? 34 : 30 },
       uPixel: { value: Math.min(window.devicePixelRatio, 2) },
       uMouse: { value: new THREE.Vector2(99, 99) },
+      uAspect: { value: 1 },
       uAlpha: { value: 1 },
       uC1: { value: new THREE.Color("#c6ff3d") },
       uC2: { value: new THREE.Color("#ff6a3d") },
@@ -166,8 +170,8 @@ function Cloud() {
     const s = sm.current;
     const { p: target } = getProgress();
     s.p += (target - s.p) * (1 - Math.exp(-dt * 5));
-    s.mx += (state.mouse.x - s.mx) * (1 - Math.exp(-dt * 6));
-    s.my += (state.mouse.y - s.my) * (1 - Math.exp(-dt * 6));
+    s.mx += (state.mouse.x - s.mx) * (1 - Math.exp(-dt * 16));
+    s.my += (state.mouse.y - s.my) * (1 - Math.exp(-dt * 16));
     if (!state.reduce) s.rot += dt * 0.12;
 
     const u = uniforms;
@@ -176,15 +180,16 @@ function Cloud() {
     // La lista de proyectos necesita contraste: la nube se atenúa ahí.
     u.uAlpha.value = 1 - 0.55 * Math.max(0, 1 - Math.abs(s.p - 2) * 1.3);
 
-    const halfH = Math.tan((camera.fov * Math.PI) / 360) * camera.position.z;
-    u.uMouse.value.set(s.mx * halfH * camera.aspect, s.my * halfH);
+    u.uMouse.value.set(s.mx, s.my);
+    u.uAspect.value = camera.aspect;
 
     const g = group.current;
     g.position.x = at(X, s.p);
     g.position.y = at(Y, s.p);
     g.scale.setScalar(at(S, s.p));
-    g.rotation.y = s.rot + s.p * 0.9 + s.mx * 0.25;
-    g.rotation.x = -s.my * 0.15 + Math.sin(s.p * Math.PI) * 0.2;
+    const cx = Math.max(-1, Math.min(1, s.mx)), cy = Math.max(-1, Math.min(1, s.my));
+    g.rotation.y = s.rot + s.p * 0.9 + cx * 0.25;
+    g.rotation.x = -cy * 0.15 + Math.sin(s.p * Math.PI) * 0.2;
   });
 
   return (
