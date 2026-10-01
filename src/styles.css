@@ -112,7 +112,8 @@ section { position: relative; padding: 0 var(--g); }
 .hero__title .line { display: block; white-space: nowrap; }
 .hero__title .line.serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.03em; margin-left: 0.6em; color: var(--acid); }
 .mask { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.06em 0 0.14em; margin-bottom: -0.14em; }
-.ch { display: inline-block; transition: font-variation-settings 0.35s ease; will-change: transform; }
+.ch { display: inline-block; will-change: transform; }
+.hero__title.is-set .mask { display: inline-flex; justify-content: center; overflow: visible; }
 .serif .ch { font-family: var(--serif); }
 .hero__sub { max-width: 34rem; margin-top: 2.4rem; font-size: clamp(1rem, 1.35vw, 1.3rem); line-height: 1.45; color: var(--dim); }
 .hero__foot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--dim); }
@@ -181,7 +182,7 @@ section { position: relative; padding: 0 var(--g); }
 @keyframes marq { to { transform: translateX(-50%); } }
 
 /* ---------- Contacto ---------- */
-.contact { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 18svh; padding-bottom: var(--g); }
+.contact { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 18svh; padding-bottom: calc(var(--g) + 3.4rem); }
 .cta { font-size: clamp(2.6rem, 9vw, 10rem); font-weight: 500; line-height: 0.92; letter-spacing: -0.05em; }
 .cta__line { display: block; overflow: hidden; padding: 0.04em 0 0.14em; margin-bottom: -0.14em; }
 .cta__line span { display: block; }
@@ -220,6 +221,7 @@ section { position: relative; padding: 0 var(--g); }
   .row__y { display: none; }
   .row__arrow { grid-column: 3; grid-row: 1; }
   .preview { display: none; }
+  .contact { padding-bottom: calc(var(--g) + 1rem); }
   .mail { padding: 1rem 1.4rem; }
   .wa { padding-left: 0; border-left: 0; }
 }

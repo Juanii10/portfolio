@@ -3,7 +3,7 @@ export const profile = {
   name: "Juan Ignacio Darsaut",
   role: "Desarrollador web creativo",
   city: "Buenos Aires, AR",
-  photo: "/foto.svg", // TODO: reemplazar por tu foto real (retrato vertical 4:5)
+  photo: "/foto.jpg", // retrato 4:5
   email: "darsaut.juani@gmail.com",
   phone: "+54 9 11 2356-3236",
   whatsapp: "https://wa.me/5491123563236",
