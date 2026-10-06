@@ -3,11 +3,13 @@ import gsap from "gsap";
 import { profile } from "../data.js";
 import { state } from "../state.js";
 import { reveal } from "../lib.js";
+import { useLang } from "../i18n.jsx";
 
 export default function Contact() {
   const root = useRef();
   const mag = useRef();
   const [copied, setCopied] = useState(false);
+  const { t } = useLang();
 
   useEffect(() => {
     return reveal(root.current.querySelector(".cta"), root.current.querySelectorAll(".cta__line span"),
@@ -41,23 +43,23 @@ export default function Contact() {
 
   return (
     <section className="contact" data-section id="s3" ref={root}>
-      <span className="label mono">(03) Contacto</span>
+      <span className="label mono">{t.contact.label}</span>
       <h2 className="cta">
-        <span className="cta__line"><span>¿Hacemos algo</span></span>
-        <span className="cta__line"><span><em>increíble</em> juntos?</span></span>
+        <span className="cta__line"><span>{t.contact.line1}</span></span>
+        <span className="cta__line"><span><em>{t.contact.em}</em> {t.contact.line2}</span></span>
       </h2>
 
       <div className="contact__row">
-        <a ref={mag} className="mail" href={`mailto:${profile.email}`} data-cursor="Escribir">
+        <a ref={mag} className="mail" href={`mailto:${profile.email}`} data-cursor={t.cursor.write}>
           <span>{profile.email}</span>
           <i aria-hidden="true">↗</i>
         </a>
-        <a className="wa" href={profile.whatsapp} target="_blank" rel="noreferrer" data-cursor="Chatear">
+        <a className="wa" href={profile.whatsapp} target="_blank" rel="noreferrer" data-cursor={t.cursor.chat}>
           <span>WhatsApp</span>
           <small className="mono">{profile.phone}</small>
         </a>
-        <button className="copy mono" onClick={copy} data-cursor="Copiar">
-          {copied ? "Copiado ✓" : "Copiar mail"}
+        <button className="copy mono" onClick={copy} data-cursor={t.cursor.copy}>
+          {copied ? t.contact.copied : t.contact.copy}
         </button>
       </div>
 
@@ -65,11 +67,11 @@ export default function Contact() {
         <span>© {new Date().getFullYear()} {profile.name}</span>
         <span className="foot__links">
           {profile.links.map((l) => (
-            <a key={l.label} href={l.href} target="_blank" rel="noreferrer" data-cursor="Abrir">{l.label}</a>
+            <a key={l.label} href={l.href} target="_blank" rel="noreferrer" data-cursor={t.cursor.open}>{l.label}</a>
           ))}
         </span>
-        <a href="#top" data-cursor="Subir" onClick={(e) => { e.preventDefault(); state.lenis?.scrollTo(0, { duration: 2 }); }}>
-          Volver arriba ↑
+        <a href="#top" data-cursor={t.cursor.up} onClick={(e) => { e.preventDefault(); state.lenis?.scrollTo(0, { duration: 2 }); }}>
+          {t.contact.up}
         </a>
       </footer>
     </section>

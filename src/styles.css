@@ -79,13 +79,19 @@ main { position: relative; z-index: 2; }
 
 /* ---------- HUD ---------- */
 .hud { position: fixed; inset: 0; z-index: 40; pointer-events: none; color: var(--fg); }
-.hud a { pointer-events: auto; }
+.hud a, .hud button { pointer-events: auto; }
 .hud__in { visibility: hidden; }
 .hud__logo { position: absolute; top: var(--g); left: var(--g); font-family: var(--sans); font-size: 1.4rem; font-weight: 700; letter-spacing: -0.04em; text-transform: none; }
 .hud__logo sup { font-size: 0.5em; color: var(--acid); }
-.hud__nav { position: absolute; top: var(--g); right: var(--g); display: flex; gap: clamp(14px, 2.5vw, 34px); }
+.hud__nav { position: absolute; top: var(--g); right: calc(var(--g) + 5.2rem); display: flex; gap: clamp(14px, 2.5vw, 34px); }
 .hud__nav a { display: inline-block; min-width: 4.5em; text-align: right; }
 .hud__nav a:hover { color: var(--acid); }
+.hud__lang { position: absolute; top: var(--g); right: var(--g); display: flex; align-items: center; gap: 0.5rem; }
+.hud__lang span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hud__lang i { font-style: normal; color: var(--dim); }
+.hud__lang button { padding: 0.15rem 0; color: var(--dim); letter-spacing: 0.08em; border-bottom: 1px solid transparent; transition: color 0.25s, border-color 0.25s; }
+.hud__lang button:hover { color: var(--fg); }
+.hud__lang button.is-on { color: var(--acid); border-bottom-color: var(--acid); }
 .hud__time { position: absolute; bottom: var(--g); left: var(--g); color: var(--dim); }
 .hud__time span { color: var(--acid); margin-left: 0.4em; }
 .hud__sec { position: absolute; bottom: var(--g); right: var(--g); color: var(--dim); }
@@ -206,7 +212,6 @@ section { position: relative; padding: 0 var(--g); }
 @media (max-width: 800px) {
   .hud__nav, .hud__pct, .hud__rail { display: none; }
   .hud__sec { display: none; }
-  .hud__time { left: auto; right: var(--g); top: calc(var(--g) + 0.3rem); bottom: auto; }
   .hero { justify-content: flex-end; }
   .hero__title .line.serif { margin-left: 0.3em; }
   .about { align-items: flex-start; }
@@ -221,7 +226,7 @@ section { position: relative; padding: 0 var(--g); }
   .row__y { display: none; }
   .row__arrow { grid-column: 3; grid-row: 1; }
   .preview { display: none; }
-  .contact { padding-bottom: calc(var(--g) + 1rem); }
+  .contact { padding-bottom: calc(var(--g) + 2.2rem); }
   .mail { padding: 1rem 1.4rem; }
   .wa { padding-left: 0; border-left: 0; }
 }

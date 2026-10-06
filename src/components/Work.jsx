@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { projects, stack } from "../data.js";
 import { state } from "../state.js";
 import { reveal } from "../lib.js";
+import { useLang } from "../i18n.jsx";
 
 function Visual({ p, i }) {
   if (p.image) return <img src={p.image} alt="" loading="lazy" />;
@@ -18,6 +19,7 @@ export default function Work() {
   const root = useRef();
   const prev = useRef();
   const [active, setActive] = useState(-1);
+  const { t } = useLang();
 
   useEffect(() => {
     const undo = reveal(root.current.querySelector(".rows"), root.current.querySelectorAll(".row"),
@@ -47,17 +49,17 @@ export default function Work() {
   return (
     <section className="work" data-section id="s2" ref={root}>
       <div className="work__head">
-        <span className="label mono">(02) Trabajo seleccionado</span>
-        <h2>Cosas que construí<br /><em>con cuidado</em></h2>
+        <span className="label mono">{t.work.label}</span>
+        <h2>{t.work.title1}<br /><em>{t.work.title2}</em></h2>
       </div>
 
       <ul className={`rows ${active >= 0 ? "has-active" : ""}`} onMouseLeave={() => setActive(-1)}>
         {projects.map((p, i) => (
           <li key={p.title} className={`row ${active === i ? "is-active" : ""}`} onMouseEnter={() => setActive(i)}>
-            <a href={p.href} target="_blank" rel="noreferrer" data-cursor="Ver">
+            <a href={p.href} target="_blank" rel="noreferrer" data-cursor={t.cursor.view}>
               <span className="row__n mono">{String(i + 1).padStart(2, "0")}</span>
               <span className="row__t">{p.title}</span>
-              <span className="row__d">{p.desc}<small className="mono">{p.tags}</small></span>
+              <span className="row__d">{t.work.desc[p.id]}<small className="mono">{p.tags}</small></span>
               <span className="row__y mono">{p.year}</span>
               <span className="row__arrow" aria-hidden="true">↗</span>
             </a>

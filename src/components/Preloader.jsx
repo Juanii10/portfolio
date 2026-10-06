@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { state } from "../state.js";
+import { useLang } from "../i18n.jsx";
 
 export default function Preloader({ onDone }) {
+  const { t } = useLang();
   const root = useRef();
   const num = useRef();
   const bar = useRef();
@@ -30,7 +32,7 @@ export default function Preloader({ onDone }) {
     <div className="pre" ref={root}>
       <div className="pre__top mono">
         <span>JD® Portfolio</span>
-        <span>Cargando la nube de partículas</span>
+        <span>{t.pre}</span>
       </div>
       <div className="pre__word">
         <span>Darsaut</span>

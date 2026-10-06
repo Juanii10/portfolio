@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { profile } from "../data.js";
 import { state } from "../state.js";
+import { useLang } from "../i18n.jsx";
 
 const Chars = ({ text }) =>
   [...text].map((c, i) => (
@@ -12,6 +13,7 @@ const Chars = ({ text }) =>
 
 export default function Hero({ ready }) {
   const title = useRef();
+  const { t } = useLang();
 
   // Tipografía variable: las letras cercanas al cursor engordan.
   // Solo varía el peso (no el ancho) y cada letra tiene el ancho fijado, así el
@@ -90,19 +92,18 @@ export default function Hero({ ready }) {
   return (
     <section className="hero" data-section id="s0">
       <p className="hero__kicker mono fade">
-        <i className="dot" /> Disponible para proyectos — 2026
+        <i className="dot" /> {t.hero.kicker}
       </p>
       <h1 className="hero__title" ref={title} aria-label={profile.name}>
         <span className="line"><Chars text="Juan Ignacio" /></span>
         <span className="line serif"><Chars text="Darsaut" /></span>
       </h1>
       <p className="hero__sub fade">
-        {profile.role}. Construyo interfaces con movimiento, 3D y una obsesión
-        incómoda por el detalle.
+        {t.hero.role}. {t.hero.sub}
       </p>
       <div className="hero__foot mono fade">
         <span>{profile.city}</span>
-        <span className="scroll"><i /> Scroll</span>
+        <span className="scroll"><i /> {t.hero.scroll}</span>
         <span>React · Three.js · SAP Fiori</span>
       </div>
     </section>
