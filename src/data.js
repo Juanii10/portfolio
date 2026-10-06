@@ -27,7 +27,7 @@ export const projects = [
     title: "Forja",
     tags: "Astro · Tailwind CSS · JavaScript",
     year: "2026",
-    image: "/forja.png",
+    image: "/forja.jpg",
     href: "https://forja-gym-eta.vercel.app/",
   },
   {
