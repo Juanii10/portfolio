@@ -155,7 +155,7 @@ section { position: relative; padding: 0 var(--g); }
 .row__n, .row__y { color: var(--dim); }
 .row__t { font-size: clamp(2rem, 5.2vw, 5.4rem); line-height: 1; letter-spacing: -0.045em; font-weight: 500; transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s; }
 .row.is-active .row__t { transform: translateX(1.2rem); color: var(--acid); }
-.row__d { display: flex; flex-direction: column; gap: 0.5rem; font-size: 1.05rem; }
+.row__d { display: flex; flex-direction: column; gap: 0.6rem; max-width: 36rem; font-size: 1.05rem; line-height: 1.4; }
 .row__d small { color: var(--dim); }
 .row__arrow { font-size: 1.6rem; transition: transform 0.4s; }
 .row.is-active .row__arrow { transform: translate(4px, -4px); color: var(--acid); }
