@@ -33,6 +33,8 @@ export default function Contact() {
     return () => { el.removeEventListener("pointermove", move); el.removeEventListener("pointerleave", leave); };
   }, []);
 
+  // Abre un borrador de Gmail en otra pestaña (el mailto: no hace nada si no hay
+  // programa de correo configurado) y además copia el mail, con confirmación.
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(profile.email);
@@ -50,8 +52,11 @@ export default function Contact() {
       </h2>
 
       <div className="contact__row">
-        <a ref={mag} className="mail" href={`mailto:${profile.email}`} data-cursor={t.cursor.write}>
-          <span>{profile.email}</span>
+        <a ref={mag} className={`mail ${copied ? "is-copied" : ""}`} href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent(t.contact.subject)}`} target="_blank" rel="noreferrer" data-cursor={t.cursor.write} onClick={copy}>
+          <span className="mail__txt">
+            <span>{profile.email}</span>
+            <span aria-live="polite">{t.contact.copied}</span>
+          </span>
           <i aria-hidden="true">↗</i>
         </a>
         <a className="wa" href={profile.whatsapp} target="_blank" rel="noreferrer" data-cursor={t.cursor.chat}>

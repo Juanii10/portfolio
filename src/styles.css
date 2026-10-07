@@ -196,6 +196,11 @@ section { position: relative; padding: 0 var(--g); }
 .contact__row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem 2.5rem; margin: 4rem 0 5rem; }
 .mail { display: inline-flex; align-items: center; gap: 1.2rem; padding: 1.3rem 2.2rem; border-radius: 999px; border: 1px solid var(--fg);
   font-size: clamp(1.1rem, 2.6vw, 2.2rem); letter-spacing: -0.03em; transition: background 0.4s, color 0.4s, border-color 0.4s; will-change: transform; }
+.mail__txt { display: grid; }
+.mail__txt > span { grid-area: 1 / 1; transition: opacity 0.25s; }
+.mail__txt > span:last-child { opacity: 0; }
+.mail.is-copied .mail__txt > span:first-child { opacity: 0; }
+.mail.is-copied .mail__txt > span:last-child { opacity: 1; }
 .mail:hover { background: var(--acid); color: #000; border-color: var(--acid); }
 .mail i { font-style: normal; transition: transform 0.4s; }
 .mail:hover i { transform: rotate(45deg); }

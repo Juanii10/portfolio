@@ -15,14 +15,6 @@ export const profile = {
 // `image` es opcional (archivo dentro de /public); sin imagen se genera una tarjeta con gradiente.
 export const projects = [
   {
-    id: "nula",
-    title: "Nula",
-    tags: "Astro SSR · React · Express · Prisma · PostgreSQL · JWT",
-    year: "2026",
-    image: "/nula.jpg",
-    href: "https://nula-one.vercel.app/",
-  },
-  {
     id: "forja",
     title: "Forja",
     tags: "Astro · Tailwind CSS · JavaScript",
@@ -37,6 +29,14 @@ export const projects = [
     year: "2026",
     image: "/jaz.jpg",
     href: "https://jazminbianchi-portfolio.pages.dev/",
+  },
+  {
+    id: "nula",
+    title: "Nula",
+    tags: "Astro SSR · React · Express · Prisma · PostgreSQL · JWT",
+    year: "2026",
+    image: "/nula.jpg",
+    href: "https://nula-one.vercel.app/",
   },
 ];
 
