@@ -31,7 +31,7 @@ export const copy = {
       ],
       facts: [
         ["Base", "Buenos Aires, Argentina"],
-        ["Hago", "Front-end creativo y full-stack"],
+        ["Especialidad", "Desarrollo full-stack con foco en interfaces y experiencia de usuario"],
         ["Busco", "Proyectos donde el detalle importa"],
       ],
     },
@@ -84,7 +84,7 @@ export const copy = {
       ],
       facts: [
         ["Based in", "Buenos Aires, Argentina"],
-        ["I do", "Creative front-end and full-stack"],
+        ["Focus", "Full-stack development focused on interfaces and user experience"],
         ["Looking for", "Projects where detail matters"],
       ],
     },
