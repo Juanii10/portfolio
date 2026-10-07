@@ -86,12 +86,12 @@ main { position: relative; z-index: 2; }
 .hud__nav { position: absolute; top: var(--g); right: calc(var(--g) + 5.2rem); display: flex; gap: clamp(14px, 2.5vw, 34px); }
 .hud__nav a { display: inline-block; min-width: 4.5em; text-align: right; }
 .hud__nav a:hover { color: var(--acid); }
-.hud__lang { position: absolute; top: var(--g); right: var(--g); display: flex; align-items: center; gap: 0.5rem; }
-.hud__lang span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hud__lang { position: absolute; top: var(--g); right: var(--g); display: flex; align-items: baseline; gap: 0.5rem; }
+.hud__lang span { display: inline-flex; align-items: baseline; gap: 0.5rem; }
 .hud__lang i { font-style: normal; color: var(--dim); }
-.hud__lang button { padding: 0.15rem 0; color: var(--dim); letter-spacing: 0.08em; border-bottom: 1px solid transparent; transition: color 0.25s, border-color 0.25s; }
+.hud__lang button { padding: 0; line-height: inherit; letter-spacing: inherit; color: var(--dim); text-decoration: underline 1px transparent; text-underline-offset: 0.4em; transition: color 0.25s, text-decoration-color 0.25s; }
 .hud__lang button:hover { color: var(--fg); }
-.hud__lang button.is-on { color: var(--acid); border-bottom-color: var(--acid); }
+.hud__lang button.is-on { color: var(--acid); text-decoration-color: var(--acid); }
 .hud__time { position: absolute; bottom: var(--g); left: var(--g); color: var(--dim); }
 .hud__time span { color: var(--acid); margin-left: 0.4em; }
 .hud__sec { position: absolute; bottom: var(--g); right: var(--g); color: var(--dim); }
