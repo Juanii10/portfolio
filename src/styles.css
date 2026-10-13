@@ -204,6 +204,10 @@ section { position: relative; padding: 0 var(--g); }
 .mail:hover { background: var(--acid); color: #000; border-color: var(--acid); }
 .mail i { font-style: normal; transition: transform 0.4s; }
 .mail:hover i { transform: rotate(45deg); }
+.cv { display: inline-flex; align-items: center; gap: 0.9rem; padding: 0.95rem 1.6rem; border-radius: 999px; border: 1px solid var(--line); font-size: clamp(1rem, 1.5vw, 1.2rem); letter-spacing: -0.02em; transition: background 0.35s, color 0.35s, border-color 0.35s; }
+.cv i { font-style: normal; transition: transform 0.35s; }
+.cv:hover { background: var(--acid); color: #000; border-color: var(--acid); }
+.cv:hover i { transform: translateY(3px); }
 .wa { display: inline-flex; flex-direction: column; gap: 0.25rem; padding: 0.4rem 0 0.4rem 1.6rem; border-left: 1px solid var(--line); font-size: clamp(1.1rem, 2vw, 1.6rem); letter-spacing: -0.03em; transition: color 0.3s; }
 .wa small { color: var(--dim); }
 .wa:hover { color: var(--acid); }

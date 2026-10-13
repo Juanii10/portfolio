@@ -6,6 +6,11 @@ export const profile = {
   email: "darsaut.juani@gmail.com",
   phone: "+54 9 11 2356-3236",
   whatsapp: "https://wa.me/5491123563236",
+  // CV en PDF (public/cv): se descarga la versión del idioma activo.
+  cv: {
+    es: "/cv/CV_Juan_Darsaut_Developer_ES.pdf",
+    en: "/cv/CV_Juan_Darsaut_Developer_EN.pdf",
+  },
   links: [
     { label: "GitHub", href: "https://github.com/Juanii10" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/juan-ignacio-darsaut-86ba88247" },

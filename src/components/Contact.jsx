@@ -9,7 +9,7 @@ export default function Contact() {
   const root = useRef();
   const mag = useRef();
   const [copied, setCopied] = useState(false);
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   useEffect(() => {
     return reveal(root.current.querySelector(".cta"), root.current.querySelectorAll(".cta__line span"),
@@ -58,6 +58,10 @@ export default function Contact() {
             <span aria-live="polite">{t.contact.copied}</span>
           </span>
           <i aria-hidden="true">↗</i>
+        </a>
+        <a className="cv" href={profile.cv[lang]} download data-cursor={t.cursor.download}>
+          <span>{t.contact.cv}</span>
+          <i aria-hidden="true">↓</i>
         </a>
         <a className="wa" href={profile.whatsapp} target="_blank" rel="noreferrer" data-cursor={t.cursor.chat}>
           <span>WhatsApp</span>

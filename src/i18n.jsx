@@ -12,7 +12,7 @@ export const copy = {
     switchLabel: "Idioma",
     pre: "Cargando la nube de partículas",
     sections: ["Inicio", "Sobre mí", "Trabajo", "Contacto"],
-    cursor: { go: "Ir", home: "Inicio", view: "Ver", write: "Escribir", copy: "Copiar", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir" },
+    cursor: { go: "Ir", home: "Inicio", view: "Ver", write: "Escribir", copy: "Copiar", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir", download: "Bajar" },
     hero: {
       kicker: "Disponible para proyectos — 2026",
       role: "Desarrollador web creativo",
@@ -51,6 +51,7 @@ export const copy = {
       em: "increíble",
       line2: "juntos?",
       subject: "Hagamos algo increíble juntos",
+      cv: "Descargar CV",
       copy: "Copiar mail",
       copied: "Copiado ✓",
       up: "Volver arriba ↑",
@@ -66,7 +67,7 @@ export const copy = {
     switchLabel: "Language",
     pre: "Loading the particle cloud",
     sections: ["Home", "About", "Work", "Contact"],
-    cursor: { go: "Go", home: "Home", view: "View", write: "Write", copy: "Copy", hi: "Hi", chat: "Chat", open: "Open", up: "Top" },
+    cursor: { go: "Go", home: "Home", view: "View", write: "Write", copy: "Copy", hi: "Hi", chat: "Chat", open: "Open", up: "Top", download: "Get" },
     hero: {
       kicker: "Available for projects — 2026",
       role: "Creative web developer",
@@ -105,6 +106,7 @@ export const copy = {
       em: "incredible",
       line2: "together?",
       subject: "Let's make something incredible together",
+      cv: "Download CV",
       copy: "Copy email",
       copied: "Copied ✓",
       up: "Back to top ↑",
