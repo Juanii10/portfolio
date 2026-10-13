@@ -204,18 +204,20 @@ section { position: relative; padding: 0 var(--g); }
 .mail:hover { background: var(--acid); color: #000; border-color: var(--acid); }
 .mail i { font-style: normal; transition: transform 0.4s; }
 .mail:hover i { transform: rotate(45deg); }
-.cv { display: inline-flex; align-items: center; gap: 0.9rem; padding: 0.95rem 1.6rem; border-radius: 999px; border: 1px solid var(--line); font-size: clamp(1rem, 1.5vw, 1.2rem); letter-spacing: -0.02em; transition: background 0.35s, color 0.35s, border-color 0.35s; }
-.cv i { font-style: normal; transition: transform 0.35s; }
-.cv:hover { background: var(--acid); color: #000; border-color: var(--acid); }
+.cv, .social { display: inline-flex; align-items: center; gap: 0.9rem; padding: 0.95rem 1.6rem; border-radius: 999px; border: 1px solid var(--line); font-size: clamp(1rem, 1.5vw, 1.2rem); letter-spacing: -0.02em; transition: background 0.35s, color 0.35s, border-color 0.35s; }
+.cv i, .social i { font-style: normal; transition: transform 0.35s; }
+.cv:hover, .social:hover { background: var(--acid); color: #000; border-color: var(--acid); }
 .cv:hover i { transform: translateY(3px); }
+.social:hover i { transform: translate(2px, -2px); }
+.social svg { flex: none; width: 1.25em; height: 1.25em; fill: currentColor; }
+.social { padding: 0; gap: 0.5rem; border: 0; border-radius: 0; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg); }
+.social:hover { background: none; color: var(--acid); }
 .wa { display: inline-flex; flex-direction: column; gap: 0.25rem; padding: 0.4rem 0 0.4rem 1.6rem; border-left: 1px solid var(--line); font-size: clamp(1.1rem, 2vw, 1.6rem); letter-spacing: -0.03em; transition: color 0.3s; }
 .wa small { color: var(--dim); }
 .wa:hover { color: var(--acid); }
-.copy { color: var(--dim); padding: 0.6rem 0; border-bottom: 1px solid var(--line); transition: color 0.3s, border-color 0.3s; }
-.copy:hover { color: var(--acid); border-color: var(--acid); }
 .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--dim); }
-.foot a:hover { color: var(--acid); }
-.foot__links { display: flex; gap: 1.6rem; }
+.foot > a:hover { color: var(--acid); }
+.foot__links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 800px) {

@@ -12,8 +12,8 @@ export const profile = {
     en: "/cv/CV_Juan_Darsaut_Developer_EN.pdf",
   },
   links: [
-    { label: "GitHub", href: "https://github.com/Juanii10" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/juan-ignacio-darsaut-86ba88247" },
+    { label: "GitHub", icon: "github", href: "https://github.com/Juanii10" },
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/juan-ignacio-darsaut-86ba88247" },
   ],
 };
 
