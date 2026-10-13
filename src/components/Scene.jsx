@@ -128,8 +128,11 @@ const frag = /* glsl */ `
 
 // --- Nube -------------------------------------------------------------------
 const X = isMobile ? [0, 0, 0, 0] : [1.75, -1.85, 1.5, 0];
-const Y = isMobile ? [0.9, 0.9, 1.1, 0.6] : [0, 0, 0, 0.3];
-const S = isMobile ? [0.7, 0.7, 0.7, 0.8] : [1, 1, 0.92, 1.1];
+const Y = isMobile ? [1.15, 0.6, 0.9, 1.4] : [0, 0, 0, 0.3];
+const S = isMobile ? [0.52, 0.5, 0.5, 0.55] : [1, 1, 0.92, 1.1];
+// En celular el texto ocupa todo el ancho: la nube se atenúa por sección para que se lea
+// (fuerte en el inicio, donde no hay texto encima; muy tenue en Sobre mí y Trabajo).
+const ALPHA = isMobile ? [0.95, 0.28, 0.22, 0.42] : [1, 1, 1, 1];
 const at = (arr, p) => {
   const i = Math.min(Math.floor(p), arr.length - 2);
   return arr[i] + (arr[i + 1] - arr[i]) * (p - i);
@@ -178,7 +181,7 @@ function Cloud() {
     u.uTime.value = state.reduce ? 0 : clock.elapsedTime;
     u.uProgress.value = s.p;
     // La lista de proyectos necesita contraste: la nube se atenúa ahí.
-    u.uAlpha.value = 1 - 0.55 * Math.max(0, 1 - Math.abs(s.p - 2) * 1.3);
+    u.uAlpha.value = at(ALPHA, s.p) * (1 - 0.55 * Math.max(0, 1 - Math.abs(s.p - 2) * 1.3));
 
     u.uMouse.value.set(s.mx, s.my);
     u.uAspect.value = camera.aspect;

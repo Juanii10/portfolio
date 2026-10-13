@@ -215,6 +215,13 @@ section { position: relative; padding: 0 var(--g); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 800px) {
+  /* Barras con degradé: el contenido que pasa por debajo no se mezcla con el logo, el idioma ni la hora. */
+  .hud::before, .hud::after { content: ""; position: fixed; left: 0; right: 0; z-index: -1; pointer-events: none; }
+  .hud::before { top: 0; height: 68px; background: linear-gradient(to bottom, rgba(9, 9, 10, 0.94) 35%, rgba(9, 9, 10, 0)); }
+  .hud::after { bottom: 0; height: 52px; background: linear-gradient(to top, rgba(9, 9, 10, 0.94) 35%, rgba(9, 9, 10, 0)); }
+  .hero__title { font-size: clamp(3rem, 15.5vw, 6rem); }
+  .hero__sub { margin-top: 1.8rem; }
+  .hero__foot span:last-child { display: none; }
   .hud__nav, .hud__pct, .hud__rail { display: none; }
   .hud__sec { display: none; }
   .hero { justify-content: flex-end; }
