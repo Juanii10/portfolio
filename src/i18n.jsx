@@ -5,18 +5,18 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 export const copy = {
   es: {
     meta: {
-      title: "Juan Ignacio Darsaut — Desarrollador creativo",
+      title: "Juan Ignacio Darsaut — Desarrollador Full Stack",
       description:
-        "Portfolio de Juan Ignacio Darsaut: desarrollo web creativo, interfaces con movimiento, SAP Fiori y full-stack. Buenos Aires.",
+        "Portfolio de Juan Ignacio Darsaut: desarrollador full stack con más de 3 años de experiencia en SAP Fiori y proyectos web. Buenos Aires, Argentina.",
     },
     switchLabel: "Idioma",
     pre: "Cargando la nube de partículas",
     sections: ["Inicio", "Sobre mí", "Trabajo", "Contacto"],
     cursor: { go: "Ir", home: "Inicio", view: "Ver", write: "Escribir", copy: "Copiar", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir", download: "Bajar" },
     hero: {
-      kicker: "Disponible para proyectos — 2026",
-      role: "Desarrollador web creativo",
-      sub: "Construyo interfaces con movimiento, 3D y una obsesión incómoda por el detalle.",
+      kicker: "Abierto a nuevas oportunidades — 2026",
+      role: "Desarrollador Full Stack",
+      sub: "Más de 3 años construyendo aplicaciones empresariales con SAP Fiori, y webs con movimiento y una obsesión incómoda por el detalle.",
       scroll: "Scroll",
     },
     about: {
@@ -32,7 +32,7 @@ export const copy = {
       facts: [
         ["Base", "Buenos Aires, Argentina"],
         ["Especialidad", "Desarrollo full-stack con foco en interfaces y experiencia de usuario"],
-        ["Busco", "Proyectos donde el detalle importa"],
+        ["Busco", "Un equipo o proyecto donde el detalle importe"],
       ],
     },
     work: {
@@ -60,18 +60,18 @@ export const copy = {
 
   en: {
     meta: {
-      title: "Juan Ignacio Darsaut — Creative developer",
+      title: "Juan Ignacio Darsaut — Full Stack Developer",
       description:
-        "Portfolio of Juan Ignacio Darsaut: creative web development, motion-driven interfaces, SAP Fiori and full-stack. Buenos Aires.",
+        "Portfolio of Juan Ignacio Darsaut: full stack developer with over 3 years of experience in SAP Fiori and web projects. Buenos Aires, Argentina.",
     },
     switchLabel: "Language",
     pre: "Loading the particle cloud",
     sections: ["Home", "About", "Work", "Contact"],
     cursor: { go: "Go", home: "Home", view: "View", write: "Write", copy: "Copy", hi: "Hi", chat: "Chat", open: "Open", up: "Top", download: "Get" },
     hero: {
-      kicker: "Available for projects — 2026",
-      role: "Creative web developer",
-      sub: "I build interfaces with motion, 3D and an uncomfortable obsession with detail.",
+      kicker: "Open to new opportunities — 2026",
+      role: "Full Stack Developer",
+      sub: "Over 3 years building enterprise applications with SAP Fiori, and websites with motion and an uncomfortable obsession with detail.",
       scroll: "Scroll",
     },
     about: {
@@ -87,7 +87,7 @@ export const copy = {
       facts: [
         ["Based in", "Buenos Aires, Argentina"],
         ["Focus", "Full-stack development focused on interfaces and user experience"],
-        ["Looking for", "Projects where detail matters"],
+        ["Looking for", "A team or project where detail matters"],
       ],
     },
     work: {
