@@ -117,8 +117,12 @@ section { position: relative; padding: 0 var(--g); }
 .hero__title { font-size: clamp(3.2rem, 12.5vw, 13.5rem); font-weight: 500; line-height: 0.88; letter-spacing: -0.045em; }
 .hero__title .line { display: block; white-space: nowrap; }
 .hero__title .line.serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.03em; margin-left: 0.6em; color: var(--acid); }
-.mask { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.06em 0 0.14em; margin-bottom: -0.14em; }
+/* La entrada del título es un fundido con subida (sin recorte): la máscara solo conserva el espacio de línea. */
+.mask { display: inline-block; overflow: visible; vertical-align: top; padding: 0.08em 0 0.36em; margin-bottom: -0.36em; }
 .ch { display: inline-block; will-change: transform; }
+/* Ocultos hasta que arranca la animación: así no se ven un instante en su lugar final. */
+.hero__title .ch, .hero .fade { visibility: hidden; }
+.hero__title.is-set .ch { visibility: visible; }
 .hero__title.is-set .mask { display: inline-flex; justify-content: center; overflow: visible; }
 .serif .ch { font-family: var(--serif); }
 .hero__sub { max-width: 34rem; margin-top: 2.4rem; font-size: clamp(1rem, 1.35vw, 1.3rem); line-height: 1.45; color: var(--dim); }

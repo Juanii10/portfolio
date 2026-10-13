@@ -22,8 +22,11 @@ export default function Hero({ ready }) {
     if (!ready) return;
     const el = title.current;
     const tl = gsap.timeline();
-    tl.fromTo(".hero .ch", { yPercent: 115, rotate: 7 }, { yPercent: 0, rotate: 0, duration: 1.3, stagger: 0.035, ease: "expo.out" })
+    tl.fromTo(".hero .ch", { autoAlpha: 0, yPercent: 40, rotate: 4 }, { autoAlpha: 1, yPercent: 0, rotate: 0, duration: 1.2, stagger: 0.04, ease: "power3.out" })
       .fromTo(".hero .fade", { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 1, stagger: 0.12, ease: "power3.out" }, "-=0.8");
+
+    // Termina la entrada: se quita el recorte de la máscara (en todos los dispositivos).
+    tl.add(() => el.classList.add("is-set"));
 
     if (state.coarse || state.reduce) return () => tl.kill();
 
@@ -76,7 +79,7 @@ export default function Hero({ ready }) {
     const leave = () => { items.forEach((it) => (it.target = REST)); kick(); };
 
     // Se fija el ancho recién cuando termina la entrada y las fuentes cargaron.
-    tl.add(() => { document.fonts.ready.then(lock); el.classList.add("is-set"); });
+    tl.add(() => { document.fonts.ready.then(lock); });
     window.addEventListener("resize", lock);
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerleave", leave);
