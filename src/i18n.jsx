@@ -12,7 +12,7 @@ export const copy = {
     switchLabel: "Idioma",
     pre: "Cargando la nube de partículas",
     sections: ["Inicio", "Sobre mí", "Trabajo", "Contacto"],
-    cursor: { go: "Ir", home: "Inicio", view: "Ver", write: "Escribir", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir", download: "Bajar" },
+    cursor: { go: "Ir", home: "Inicio", view: "Ver", study: "Ver caso", close: "Cerrar", write: "Escribir", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir", download: "Bajar" },
     hero: {
       kicker: "Abierto a nuevas oportunidades — 2026",
       role: "Desarrollador Full Stack",
@@ -34,6 +34,29 @@ export const copy = {
         ["Especialidad", "Desarrollo full-stack con foco en interfaces y experiencia de usuario"],
         ["Busco", "Un equipo o proyecto donde el detalle importe"],
       ],
+      exp: {
+        label: "Trayectoria",
+        jobs: {
+          cft: {
+            role: "Desarrollador Frontend",
+            date: "Ene 2023 — Actualidad",
+            points: [
+              "Desarrollo y mantenimiento de aplicaciones web empresariales con SAP Fiori / SAPUI5 sobre SAP BAS, conectadas a sistemas internos mediante Cloud Connector.",
+              "Desarrollo ABAP para mantenimiento y nuevas funcionalidades: transacciones, tablas y logs a medida.",
+              "Del requerimiento funcional a las pruebas y la entrega en desarrollo y producción.",
+            ],
+          },
+          freelance: {
+            role: "Desarrollador Web",
+            date: "Jul 2026 — Actualidad",
+            points: [
+              "Landing pages y sitios para negocios y profesionales con Astro y Tailwind CSS, como Forja y el portfolio de Jazmín B.",
+              "Configurador interactivo de pulseras y dijes para una joyería en Tiendanube: dijes cargados desde el catálogo, integración con el carrito y pedido por WhatsApp.",
+              "Procesamiento de ~870 imágenes de producto a PNG transparente, con puntos de anclaje calculados por análisis de píxeles.",
+            ],
+          },
+        },
+      },
     },
     work: {
       label: "(02) Trabajo seleccionado",
@@ -43,6 +66,65 @@ export const copy = {
         nula: "E-commerce full-stack: catálogo con stock por talle y color, carrito, checkout transaccional y panel de administración.",
         forja: "Sitio institucional para una cadena de gimnasios: pizarra de clases filtrable por sede, planes y presentación de la app.",
         jaz: "Portfolio para una diseñadora gráfica: sitio multipágina con papelería, experimentación, diseño digital y posters.",
+      },
+      case: {
+        label: "Caso de estudio",
+        alt: "Vista previa de",
+        role: "Rol",
+        year: "Año",
+        stack: "Stack",
+        highlights: "Detalles técnicos",
+        visit: "Visitar sitio",
+        code: "Ver código",
+        close: "Cerrar",
+      },
+      cases: {
+        nula: {
+          role: "Full stack: API, base de datos y frontend",
+          summary: "Tienda online de una marca de indumentaria ficticia, con API REST propia, base de datos relacional y frontend desacoplado.",
+          highlights: [
+            "API REST con Express y Prisma sobre PostgreSQL (Neon).",
+            "Catálogo con stock por talle y color, carrito y checkout transaccional.",
+            "Autenticación con JWT y panel de administración.",
+            "Frontend en Astro SSR + React; backend en Render y frontend en Vercel.",
+          ],
+        },
+        forja: {
+          role: "Diseño y desarrollo frontend",
+          summary: "Sitio institucional para una cadena de gimnasios.",
+          highlights: [
+            "Pizarra de clases filtrable por sede.",
+            "Secciones de planes y presentación de la app del gimnasio.",
+            "Carruseles, secciones con scroll animado y diseño responsive con Astro y Tailwind CSS.",
+          ],
+        },
+        jaz: {
+          role: "Desarrollo web (freelance)",
+          summary: "Portfolio para una diseñadora gráfica.",
+          highlights: [
+            "Sitio multipágina con React y React Router: papelería, experimentación, diseño digital y posters.",
+            "Deploy en Cloudflare Pages.",
+            "Trabajo iterativo con la clienta: primero una demo, después la versión final.",
+          ],
+        },
+      },
+      more: {
+        title: "Otros proyectos",
+        items: {
+          bruma: {
+            tag: "Proyecto personal",
+            desc: "Sistema de turnos online para una peluquería: varios profesionales con agenda propia, seña simulada, recordatorios por email y panel con estadísticas.",
+          },
+          condor: {
+            tag: "Universidad (FIUBA)",
+            desc: "Reserva de asientos de vuelos con backend concurrente en Elixir sin frameworks (un GenServer por vuelo, DynamicSupervisor y Registry) y comunicación en tiempo real por WebSockets.",
+          },
+          pulseras: {
+            name: "Configurador de pulseras",
+            tag: "Cliente",
+            desc: "Configurador interactivo de pulseras y dijes integrado al carrito de una tienda Tiendanube.",
+          },
+        },
       },
     },
     contact: {
@@ -66,7 +148,7 @@ export const copy = {
     switchLabel: "Language",
     pre: "Loading the particle cloud",
     sections: ["Home", "About", "Work", "Contact"],
-    cursor: { go: "Go", home: "Home", view: "View", write: "Write", hi: "Hi", chat: "Chat", open: "Open", up: "Top", download: "Get" },
+    cursor: { go: "Go", home: "Home", view: "View", study: "Case", close: "Close", write: "Write", hi: "Hi", chat: "Chat", open: "Open", up: "Top", download: "Get" },
     hero: {
       kicker: "Open to new opportunities — 2026",
       role: "Full Stack Developer",
@@ -88,6 +170,29 @@ export const copy = {
         ["Focus", "Full-stack development focused on interfaces and user experience"],
         ["Looking for", "A team or project where detail matters"],
       ],
+      exp: {
+        label: "Experience",
+        jobs: {
+          cft: {
+            role: "Frontend Developer",
+            date: "Jan 2023 — Present",
+            points: [
+              "Development and maintenance of enterprise web applications with SAP Fiori / SAPUI5 on SAP BAS, connected to internal systems through Cloud Connector.",
+              "ABAP development for maintenance and new features: custom transactions, tables and logs.",
+              "From functional requirements through testing and delivery to development and production.",
+            ],
+          },
+          freelance: {
+            role: "Web Developer",
+            date: "Jul 2026 — Present",
+            points: [
+              "Landing pages and sites for businesses and professionals with Astro and Tailwind CSS, like Forja and Jazmín B.'s portfolio.",
+              "Interactive bracelet and charm configurator for a jewelry store on Tiendanube: charms loaded from the catalog, cart integration and order handoff via WhatsApp.",
+              "Processed ~870 product images into transparent PNGs, with anchor points computed through pixel analysis.",
+            ],
+          },
+        },
+      },
     },
     work: {
       label: "(02) Selected work",
@@ -97,6 +202,65 @@ export const copy = {
         nula: "Full-stack e-commerce: catalog with stock per size and color, cart, transactional checkout and admin panel.",
         forja: "Corporate website for a gym chain: class board filterable by branch, plans and app showcase.",
         jaz: "Portfolio for a graphic designer: multi-page site with stationery, experimentation, digital design and posters.",
+      },
+      case: {
+        label: "Case study",
+        alt: "Preview of",
+        role: "Role",
+        year: "Year",
+        stack: "Stack",
+        highlights: "Technical highlights",
+        visit: "Visit site",
+        code: "View code",
+        close: "Close",
+      },
+      cases: {
+        nula: {
+          role: "Full stack: API, database and frontend",
+          summary: "Online store for a fictional clothing brand, with its own REST API, relational database and decoupled frontend.",
+          highlights: [
+            "REST API with Express and Prisma on PostgreSQL (Neon).",
+            "Catalog with stock per size and color, cart and transactional checkout.",
+            "JWT authentication and admin dashboard.",
+            "Astro SSR + React frontend; backend on Render and frontend on Vercel.",
+          ],
+        },
+        forja: {
+          role: "Frontend design and development",
+          summary: "Website for a gym chain.",
+          highlights: [
+            "Class schedule filterable by location.",
+            "Membership plans and a showcase of the gym's app.",
+            "Carousels, scroll-animated sections and responsive design with Astro and Tailwind CSS.",
+          ],
+        },
+        jaz: {
+          role: "Web development (freelance)",
+          summary: "Portfolio for a graphic designer.",
+          highlights: [
+            "Multi-page site with React and React Router: stationery, experimentation, digital design and posters.",
+            "Deployed on Cloudflare Pages.",
+            "Iterative work with the client: a demo first, then the final version.",
+          ],
+        },
+      },
+      more: {
+        title: "More projects",
+        items: {
+          bruma: {
+            tag: "Personal project",
+            desc: "Online booking system for a hair salon: multiple professionals with their own schedules, simulated deposit, email reminders and a stats dashboard.",
+          },
+          condor: {
+            tag: "University (FIUBA)",
+            desc: "Flight seat booking with a concurrent Elixir backend built without frameworks (one GenServer per flight, DynamicSupervisor and Registry) and real-time WebSocket communication.",
+          },
+          pulseras: {
+            name: "Bracelet configurator",
+            tag: "Client",
+            desc: "Interactive bracelet and charm configurator integrated with a Tiendanube store's cart.",
+          },
+        },
       },
     },
     contact: {
