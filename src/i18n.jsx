@@ -113,7 +113,7 @@ export const copy = {
         items: {
           bruma: {
             tag: "Proyecto personal",
-            desc: "Sistema de turnos online para una peluquería: varios profesionales con agenda propia, seña simulada, recordatorios por email y panel con estadísticas.",
+            desc: "Sistema de turnos online para una peluquería: varios profesionales con agenda propia, seña, recordatorios por email y panel con estadísticas para administradores.",
           },
           condor: {
             tag: "Universidad (FIUBA)",
@@ -249,7 +249,7 @@ export const copy = {
         items: {
           bruma: {
             tag: "Personal project",
-            desc: "Online booking system for a hair salon: multiple professionals with their own schedules, simulated deposit, email reminders and a stats dashboard.",
+            desc: "Online booking system for a hair salon: multiple professionals with their own schedules, deposit, email reminders and a stats dashboard for administrators.",
           },
           condor: {
             tag: "University (FIUBA)",
