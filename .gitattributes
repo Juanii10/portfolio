@@ -1,0 +1,2 @@
+# Los binarios no se tratan como texto (git no les cambia los saltos de linea).
+*.pdf binary
