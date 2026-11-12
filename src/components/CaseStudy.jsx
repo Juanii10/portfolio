@@ -83,7 +83,6 @@ export default function CaseStudy({ i, returnTo, onClose }) {
       onPointerDown={(e) => { pressed.current = e.target; }} onClick={backdrop}>
       <div className="case__scroll" ref={scroll} data-lenis-prevent>
         <article className="case__in">
-          <span className="case__x label mono">{t.work.case.label}</span>
           <header className="case__head case__x">
             <span className="case__n mono">{String(i + 1).padStart(2, "0")}</span>
             <h3 className="case__t" id="case-title">{p.title}</h3>

@@ -51,7 +51,6 @@ export default function Contact() {
 
   return (
     <section className="contact" data-section id="s3" ref={root}>
-      <span className="label mono">{t.contact.label}</span>
       <h2 className="cta">
         <span className="cta__line"><span>{t.contact.line1}</span></span>
         <span className="cta__line"><span><em>{t.contact.em}</em> {t.contact.line2}</span></span>

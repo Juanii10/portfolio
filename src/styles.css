@@ -29,10 +29,10 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 ul { list-style: none; }
 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.label { display: block; color: var(--dim); margin-bottom: 2.2rem; }
 ::selection { background: var(--acid); color: #000; }
 .mono { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.label { display: block; color: var(--dim); margin-bottom: 2.2rem; }
 
 main { position: relative; z-index: 2; }
 .scene { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
@@ -111,9 +111,6 @@ main { position: relative; z-index: 2; }
 /* ---------- Hero ---------- */
 section { position: relative; padding: 0 var(--g); }
 .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: calc(var(--g) * 2.6); }
-.hero__kicker { display: flex; align-items: center; gap: 0.7rem; color: var(--dim); margin-bottom: 1.6rem; }
-.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 0 0 var(--acid); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(198, 255, 61, 0.6); } 70% { box-shadow: 0 0 0 10px rgba(198, 255, 61, 0); } 100% { box-shadow: 0 0 0 0 rgba(198, 255, 61, 0); } }
 .hero__title { font-size: clamp(3.2rem, 12.5vw, 13.5rem); font-weight: 500; line-height: 0.88; letter-spacing: -0.045em; }
 .hero__title .line { display: block; white-space: nowrap; }
 .hero__title .line.serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.03em; margin-left: 0.6em; color: var(--acid); }
@@ -352,5 +349,5 @@ html.has-case .hud__nav { visibility: hidden !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .grain, .dot, .scroll i::after, .marquee__row { animation: none; }
+  .grain, .scroll i::after, .marquee__row { animation: none; }
 }

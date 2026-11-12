@@ -94,9 +94,6 @@ export default function Hero({ ready }) {
 
   return (
     <section className="hero" data-section id="s0">
-      <p className="hero__kicker mono fade">
-        <i className="dot" /> {t.hero.kicker}
-      </p>
       <h1 className="hero__title" ref={title} aria-label={profile.name}>
         <span className="line"><Chars text="Juan Ignacio" /></span>
         <span className="line serif"><Chars text="Darsaut" /></span>

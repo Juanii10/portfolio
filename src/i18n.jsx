@@ -14,13 +14,11 @@ export const copy = {
     sections: ["Inicio", "Sobre mí", "Trabajo", "Contacto"],
     cursor: { go: "Ir", home: "Inicio", view: "Ver", study: "Ver caso", close: "Cerrar", write: "Escribir", hi: "Hola", chat: "Chatear", open: "Abrir", up: "Subir", download: "Bajar" },
     hero: {
-      kicker: "Abierto a nuevas oportunidades — 2026",
       role: "Desarrollador Full Stack",
       sub: "Más de 3 años construyendo aplicaciones empresariales con SAP Fiori, y webs con movimiento y una obsesión incómoda por el detalle.",
       scroll: "Scroll",
     },
     about: {
-      label: "(01) Sobre mí",
       alt: "Retrato de",
       manifesto:
         "Diseño y programo sitios que se sienten *vivos*. Me obsesiona el espacio entre lo que funciona y lo que *emociona*: el detalle de una transición, la física de un scroll, el peso exacto de una tipografía. Desde lo más profundo del backend hasta el último detalle del frontend, construyo la experiencia completa.",
@@ -59,7 +57,6 @@ export const copy = {
       },
     },
     work: {
-      label: "(02) Trabajo seleccionado",
       title1: "Cosas que construí",
       title2: "con cuidado",
       desc: {
@@ -68,7 +65,6 @@ export const copy = {
         jaz: "Portfolio para una diseñadora gráfica: sitio multipágina con papelería, experimentación, diseño digital y posters.",
       },
       case: {
-        label: "Caso de estudio",
         alt: "Vista previa de",
         role: "Rol",
         year: "Año",
@@ -128,7 +124,6 @@ export const copy = {
       },
     },
     contact: {
-      label: "(03) Contacto",
       line1: "¿Hacemos algo",
       em: "increíble",
       line2: "juntos?",
@@ -150,13 +145,11 @@ export const copy = {
     sections: ["Home", "About", "Work", "Contact"],
     cursor: { go: "Go", home: "Home", view: "View", study: "Case", close: "Close", write: "Write", hi: "Hi", chat: "Chat", open: "Open", up: "Top", download: "Get" },
     hero: {
-      kicker: "Open to new opportunities — 2026",
       role: "Full Stack Developer",
       sub: "Over 3 years building enterprise applications with SAP Fiori, and websites with motion and an uncomfortable obsession with detail.",
       scroll: "Scroll",
     },
     about: {
-      label: "(01) About",
       alt: "Portrait of",
       manifesto:
         "I design and code websites that feel *alive*. I'm obsessed with the space between what works and what *moves you*: the detail of a transition, the physics of a scroll, the exact weight of a typeface. From the depths of the backend to the last detail of the frontend, I build the whole experience.",
@@ -195,7 +188,6 @@ export const copy = {
       },
     },
     work: {
-      label: "(02) Selected work",
       title1: "Things I built",
       title2: "with care",
       desc: {
@@ -204,7 +196,6 @@ export const copy = {
         jaz: "Portfolio for a graphic designer: multi-page site with stationery, experimentation, digital design and posters.",
       },
       case: {
-        label: "Case study",
         alt: "Preview of",
         role: "Role",
         year: "Year",
@@ -264,7 +255,6 @@ export const copy = {
       },
     },
     contact: {
-      label: "(03) Contact",
       line1: "Shall we make something",
       em: "incredible",
       line2: "together?",

@@ -58,7 +58,6 @@ export default function Work() {
   return (
     <section className="work" data-section id="s2" ref={root}>
       <div className="work__head">
-        <span className="label mono">{t.work.label}</span>
         <h2>{t.work.title1}<br /><em>{t.work.title2}</em></h2>
       </div>
 

@@ -63,7 +63,6 @@ export default function About() {
   return (
     <section className="about" data-section id="s1" ref={root}>
       <div className="about__inner">
-        <span className="label mono">{t.about.label}</span>
         <div className="about__top">
           <figure className="portrait" data-cursor={t.cursor.hi}>
             <img src={profile.photo} alt={`${t.about.alt} ${profile.name}`} loading="lazy" />

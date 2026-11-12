@@ -8,8 +8,8 @@ export const profile = {
   whatsapp: "https://wa.me/5491123563236",
   // CV en PDF (public/cv): se descarga la versión del idioma activo.
   cv: {
-    es: "/cv/CV_Juan_Darsaut_Developer_ES.pdf",
-    en: "/cv/CV_Juan_Darsaut_Developer_EN.pdf",
+    es: "/cv/CV_Juan_Ignacio_Darsaut_Developer_ES.pdf",
+    en: "/cv/CV_Juan_Ignacio_Darsaut_Developer_EN.pdf",
   },
   links: [
     { label: "GitHub", icon: "github", href: "https://github.com/Juanii10" },
